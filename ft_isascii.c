@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 09:48:50 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/08 18:58:55 by ypetitje         ###   ########.fr       */
+/*   Created: 2018/11/08 15:13:36 by ypetitje          #+#    #+#             */
+/*   Updated: 2018/11/08 15:36:59 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
-int		ft_strncmp(char *str1, char *str2, int n)
+int		ft_isascii(int c)
 {
-	int i;
-	int stop;
-
-	i = 0;
-	stop = 0;
-	while (str1[i] && stop == 0 && i < n)
-	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-		i++;
-	}
-	if (str1[0] == 0)
-		return (-str2[0]);
-	else if (str1[i] == 0 && i < n)
-		return (-str2[i]);
-	return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

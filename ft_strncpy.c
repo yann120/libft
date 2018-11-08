@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:35:35 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/08 14:24:18 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/08 19:27:43 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,27 @@ int		ft_strlen(char *str)
 char	*ft_strncpy(char *dest, char *src, size_t len)
 {
 	size_t i;
-	size_t lendest;
+	// size_t lendest;
+	size_t lensrc;
 
 	i = 0;
-	lendest = ft_strlen(dest);
-	if (len > lendest)
+	// lendest = ft_strlen(dest);
+	lensrc = ft_strlen((char*)src);
+
+	while (i < len)
 	{
-		dest[0] = 0;
-		return (dest);
-	}
-	while (src[i] && i < len)
-	{
-		dest[i] = src[i];
+		if (i > lensrc)
+			dest[i] = 0;
+		else
+			dest[i] = src[i];
 		i++;
 	}
-	dest[i] = 0;
+
+	
+	// if (len > lendest)
+	// {
+	// }
+	// dest[i] = 0;
 	return (dest);
 }
 
@@ -52,71 +58,71 @@ char	*ft_strncpy(char *dest, char *src, size_t len)
 // 	return 0;
 // }
 
-// #include <stdlib.h>
-// #include <unistd.h>
-// #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
-// int		main(int argc, const char *argv[])
-// {
-// 	char	*dest;
-// 	int		arg;
+int		main(int argc, const char *argv[])
+{
+	char	*dest;
+	int		arg;
 
-// 	alarm(5);
-// 	if (!(dest = (char *)malloc(sizeof(*dest) * 15)) || argc == 1)
-// 		return (0);
-// 	memset(dest, 0, 15);
-// 	if ((arg = atoi(argv[1])) == 1)
-// 	{
-// 		memset(dest, 's', 13);
-// 		if (dest != ft_strncpy(dest, "lorem", 6))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "lorem", 6)); 
-// 	}
-// 	else if (arg == 2)
-// 	{
-// 		memset(dest, 's', 13);
-// 		if (dest != ft_strncpy(dest, "lorem", 8))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "lorem", 8)); 
+	alarm(5);
+	if (!(dest = (char *)malloc(sizeof(*dest) * 15)) || argc == 1)
+		return (0);
+	memset(dest, 0, 15);
+	if ((arg = atoi(argv[1])) == 1)
+	{
+		memset(dest, 's', 13);
+		if (dest != ft_strncpy(dest, "lorem", 6))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "lorem", 6)); 
+	}
+	else if (arg == 2)
+	{
+		memset(dest, 's', 13);
+		if (dest != ft_strncpy(dest, "lorem", 8))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "lorem", 8)); 
 
-// 	}
-// 	else if (arg == 3)
-// 	{
-// 		memset(dest, 's', 13);
-// 		if (dest != ft_strncpy(dest, "", 3))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "", 3)); 
+	}
+	else if (arg == 3)
+	{
+		memset(dest, 's', 13);
+		if (dest != ft_strncpy(dest, "", 3))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "", 3)); 
 
-// 	}
-// 	else if (arg == 4)
-// 	{
-// 		memset(dest, 's', 13);
-// 		if (dest != ft_strncpy(dest, "lorem ipsum", 3))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "lorem ipsum", 3)); 
+	}
+	else if (arg == 4)
+	{
+		memset(dest, 's', 13);
+		if (dest != ft_strncpy(dest, "lorem ipsum", 3))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "lorem ipsum", 3)); 
 
-// 	}
-// 	else if (arg == 5)
-// 	{
-// 		memset(dest, 's', 13);
-// 		if (dest != ft_strncpy(dest, "lorem ipsum", 0))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "lorem ipsum", 0)); 
+	}
+	else if (arg == 5)
+	{
+		memset(dest, 's', 13);
+		if (dest != ft_strncpy(dest, "lorem ipsum", 0))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "lorem ipsum", 0)); 
 
-// 	}
-// 	else if (arg == 6)
-// 	{
-// 		memset(dest, 's', 5);
-// 		if (dest != ft_strncpy(dest, "lorem ipsum", 10))
-// 			write(1, "dest's adress was not returned\n", 31);
-// 		write(1, dest, 15);
-// 		printf("\n%s\n", strncpy(dest, "lorem ipsum", 10)); 
+	}
+	else if (arg == 6)
+	{
+		memset(dest, 's', 5);
+		if (dest != ft_strncpy(dest, "lorem ipsum", 10))
+			write(1, "dest's adress was not returned\n", 31);
+		write(1, dest, 15);
+		printf("\n%s\n", strncpy(dest, "lorem ipsum", 10)); 
 
-// 	}
-// 	return (0);
-// }
+	}
+	return (0);
+}
