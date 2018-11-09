@@ -22,6 +22,10 @@ $(NAME):
 	gcc -c -Wall -Wextra -Werror $(SRCS)
 	ar -rc $(NAME) $(OBJS)
 
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(BIN)
+
 clean:
 	/bin/rm -f $(OBJS)
 
