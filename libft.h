@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yann <yann@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 10:00:39 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/11 17:22:59 by yann             ###   ########.fr       */
+/*   Updated: 2018/11/12 15:16:09 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strchr(const char *s, int c);
-char    *strrchr (const char *s, int c);
+char    *ft_strrchr (const char *s, int c);
 char    *ft_strstr(char *str, char *to_find);
-char    *ft_strnstr(char *str, int n, char *to_find);
+char	*ft_strnstr(char *str, char *to_find, int n);
 char    *ft_strcat(char *dest, char *src);
 char    *ft_strncat(char *dest, char *src, int n);
-char    *ft_strlcat(char *dest, const char *src, int n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif

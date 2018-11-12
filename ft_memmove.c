@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yann <yann@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:59:11 by yann              #+#    #+#             */
-/*   Updated: 2018/11/09 16:57:46 by yann             ###   ########.fr       */
+/*   Updated: 2018/11/12 11:30:29 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*buff;
+	char	buff[n];
 	size_t	i;
 
 	i = 0;
-	buff = (char*)malloc(sizeof(int)*n);
-	if (buff == NULL)
-		return (NULL);
 	while (i < n)
 	{
 		buff[i] = ((const char *)src)[i];
@@ -32,6 +29,5 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		((char *)dest)[i] = buff[i];
 		i++;
 	}
-	free(buff);
 	return (dest);
 }
