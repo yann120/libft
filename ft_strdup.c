@@ -6,21 +6,11 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:29:51 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/08 13:24:37 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/15 09:03:15 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(char *src)
 {
