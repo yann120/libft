@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:23:28 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 14:00:48 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/15 14:23:18 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 long	result(char *str, int i, int negative)
 {
 	long	result;
-	int		test = 0;
+	int		test;
 
 	result = 0;
+	test = 0;
 	while (str[i])
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -57,4 +58,3 @@ int		ft_atoi(char *str)
 	}
 	return ((int)result(str, i, negative));
 }
-
