@@ -6,13 +6,13 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:23:28 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 14:23:18 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:31:57 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	result(char *str, int i, int negative)
+static long	result(char *str, int i, int negative)
 {
 	long	result;
 	int		test;
@@ -36,7 +36,7 @@ long	result(char *str, int i, int negative)
 	return (result);
 }
 
-int		ft_atoi(char *str)
+int			ft_atoi(char *str)
 {
 	int i;
 	int negative;

@@ -6,13 +6,13 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 17:16:40 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/14 18:45:49 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:36:57 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_len(int n)
+static int		ft_len(int n)
 {
 	int len;
 
@@ -25,7 +25,7 @@ int		ft_len(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		negative;
 	int		len;
@@ -38,11 +38,11 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		negative = 1;
-		len++;
 		n = -n;
 	}
-	len += ft_len(n);
-	str = ft_strnew(len - 1);
+	len += ft_len(n) + negative;
+	if ((str = ft_strnew(len)) == NULL)
+		return (NULL);
 	str[len-- + 1] = 0;
 	while (len >= 0)
 	{
