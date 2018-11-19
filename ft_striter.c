@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:59:14 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/13 17:07:38 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/19 14:45:03 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
 	while (s[i])
 		(*f)(&s[i++]);

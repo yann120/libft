@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 17:11:11 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/19 13:20:36 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/19 14:36:17 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char		**ft_strsplit(char const *s, char c)
 	char	**tab;
 	int		start;
 
+	if (s == NULL)
+		return (NULL);
 	if ((tab = create_tab(s, c)) == NULL)
 		return (NULL);
 	i = 0;

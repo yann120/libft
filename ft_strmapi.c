@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 17:16:12 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 09:16:19 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/19 14:33:38 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		i;
 
+	if (s == NULL)
+		return (NULL);
 	str = ft_strnew(ft_strlen((char *)s));
 	if (str == NULL)
 		return (NULL);

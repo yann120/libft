@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 08:29:07 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 09:17:09 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/19 14:35:55 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*str;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	str = ft_strnew(ft_strlen((char *)s1) + ft_strlen((char *)s2));
 	if (str == NULL)
 		return (NULL);
