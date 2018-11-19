@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 16:38:57 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 17:19:49 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/19 13:26:01 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ void	ft_strclr(char *s)
 	i = 0;
 	sptr = s;
 	if (s != NULL)
-	{
-	while (i < n)
-		sptr[i++] = 0;
-	}
+		while (i < n)
+			sptr[i++] = 0;
 }
