@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 09:13:52 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/19 14:36:41 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 12:49:58 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int start;
-	int end;
+	size_t start;
+	size_t end;
 
 	if (s == NULL)
 		return (0);

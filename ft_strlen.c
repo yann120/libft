@@ -6,13 +6,13 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 09:17:54 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/08 10:31:48 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 12:46:23 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+size_t		ft_strlen(const char *str)
 {
 	int i;
 

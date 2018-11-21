@@ -6,17 +6,17 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 17:11:11 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/19 14:36:17 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 18:58:20 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**create_tab(char const *s, char c)
+static char		**create_tab(char const *s, char c)
 {
-	int		i;
-	int		count;
-	char	**tab;
+	size_t		i;
+	int			count;
+	char		**tab;
 
 	count = 0;
 	i = 0;
@@ -36,9 +36,15 @@ static char	**create_tab(char const *s, char c)
 	return (tab);
 }
 
-char		**ft_strsplit(char const *s, char c)
+static char		**free_memory(char **tab)
 {
-	int		i;
+	free(tab);
+	return (NULL);
+}
+
+char			**ft_strsplit(char const *s, char c)
+{
+	size_t	i;
 	int		j;
 	char	**tab;
 	int		start;
@@ -59,7 +65,7 @@ char		**ft_strsplit(char const *s, char c)
 			while (s[i] != c && s[i])
 				i++;
 			if (!(tab[j++] = ft_strsub(s, start, i - start)))
-				return (NULL);
+				return (free_memory(tab));
 		}
 	}
 	return (tab);

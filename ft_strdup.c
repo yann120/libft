@@ -6,13 +6,13 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:29:51 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/15 16:49:51 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 17:32:40 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	char	*dest;

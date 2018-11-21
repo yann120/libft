@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:50:29 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/12 18:17:12 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 13:16:56 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr(int n)
 		ft_putchar('-');
 		n *= -1;
 	}
-	if (n > 10)
+	if (n >= 10)
 		ft_putnbr(n / 10);
 	ft_putchar(n % 10 + '0');
 }

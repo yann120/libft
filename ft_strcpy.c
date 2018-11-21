@@ -6,13 +6,13 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:27:33 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/08 13:34:30 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/21 17:36:33 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	int i;
 
