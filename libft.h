@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yann <yann@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 13:19:15 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/21 17:36:39 by ypetitje         ###   ########.fr       */
+/*   Updated: 2018/11/22 11:30:29 by yann             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,10 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void			ft_lst_push_back(t_list **begin_list, void const *data);
+void			ft_putlststr(t_list **begin_list);
+void			ft_lst_push_front(t_list **begin_list, void const *data);
+size_t			ft_lst_size(t_list **begin_list);
+t_list			*ft_lst_create_elem(void const *content);
 
 #endif
