@@ -6,7 +6,7 @@
 /*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 09:19:36 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/21 16:57:37 by ypetitje         ###   ########.fr       */
+/*   Updated: 2019/03/13 09:53:16 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*list;
 
-	list = malloc(sizeof(*list));
+	list = (t_list *)malloc(sizeof(*list));
 	if (list == NULL)
 		return (NULL);
 	if (content == NULL)
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		list->content = malloc(content_size);
+		list->content = (t_list *)malloc(content_size);
 		if (list->content == NULL)
 		{
 			free(list);
