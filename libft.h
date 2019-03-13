@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yann <yann@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ypetitje <ypetitje@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 13:19:15 by ypetitje          #+#    #+#             */
-/*   Updated: 2018/11/22 11:30:29 by yann             ###   ########.fr       */
+/*   Updated: 2019/03/13 14:12:13 by ypetitje         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct	s_list
 
 size_t			ft_strlen(const char *str);
 int				ft_strcmp(const char *str1, const char *str2);
-int				ft_strncmp(const char *str1, const char *str2, int n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strdup(const char *src);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
